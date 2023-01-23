@@ -29,7 +29,7 @@ export default function Board() {
 
   const winner = calculateWinner(squares);
   let status = winner
-    ? winner + "'s wins this game!";
+    ? winner + "'s wins this game!"
     : "Next player is " + (nextPlayerIsX ? "X" : "O")
   }
 
@@ -48,7 +48,7 @@ export default function Board() {
     for (let i = 0; i < lines.length; i++) {
       const [a, b, c] = lines[i];
       
-      if (squares[a] && squares[a] === squares[b]) && (squares[a] === squares[c])) {
+      if ((squares[a] && squares[a] === squares[b]) && (squares[a] === squares[c])) {
         return squares[a];
       }
     }
@@ -75,4 +75,3 @@ export default function Board() {
       </div>
     </>
   );
-}
